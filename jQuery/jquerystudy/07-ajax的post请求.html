@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btnPost">发送post请求</button>
+    <button class="btnPostAjax">使用ajax发送post请求</button>
+    <script src="./jQuery/jquery-3.5.1.js"></script>
+    <script>
+        // 发送post请求
+        $('.btnPost').click(function(res){
+            $.post('https://test-app.saasp.vdyoo.com/backstage/xes/coupon/v1/myPage/couponList', {'pageNo': 1, 'pageSize': 10, 'couponStatus': 0}, function(res) {
+                console.log('res: ' + res);
+            })
+        })
+        // 使用ajax发送post请求
+        $('.btnPostAjax').click(function(res) {
+            $.ajax({
+                type : 'POST',
+                url : 'https://test-app.saasp.vdyoo.com/backstage/xes/coupon/v1/myPage/couponList',
+                data : {'pageNo': 1, 'pageSize': 10, 'couponStatus': 0},
+                success : function(res) {
+                    console.log('res: '+ res);
+                }
+            })
+        })
+    </script>
+</body>
+</html>
