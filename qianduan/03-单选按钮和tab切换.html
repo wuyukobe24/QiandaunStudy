@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pink {
+            background-color: pink;
+        }
+        .products .main {
+            float: left;
+            display: none;
+        }
+        .products .main.active {
+            display: block;
+        }
+        .products div {
+            text-align: center;
+            line-height: 150px;
+            background-color: lightgray;
+            width: 200px;
+            height: 150px;
+        }
+
+    </style>
+</head>
+<body>
+    <button class="pink">按钮1</button>
+    <button>按钮2</button>
+    <button>按钮3</button>
+    <button>按钮4</button>
+    <div class="products">
+        <div class="main active">按钮1控制的</div>
+        <div class="main">按钮2控制的</div>
+        <div class="main">按钮3控制的</div>
+        <div class="main">按钮4控制的</div>
+    </div>
+    <script>
+        // 获取所有按钮
+        let btns = document.querySelectorAll('button')
+        let divs = document.querySelectorAll('.products .main')
+        for (let i=0; i<btns.length; i++) {
+            // 给每个按钮添加监听事件
+            btns[i].addEventListener('click', function(){
+                // 当选中某一个时，所有按钮先移除颜色
+                // for (j=0; j<btns.length; j++){
+                //     btns[j].classList.remove('pink')
+                // }
+                // 移除之前选中的按钮的颜色
+                document.querySelector('.pink').classList.remove('pink')
+                // 被选中按钮的在添加颜色
+                this.classList.add('pink')
+                // 隐藏之前展示的div
+                document.querySelector('.products .active').classList.remove('active')
+                // 展示选中后对应的div
+                divs[i].classList.add('active')
+            })
+        }
+    </script>
+</body>
+</html>

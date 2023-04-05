@@ -1,0 +1,27 @@
+p {
+    color: green;
+    font-size: 20px;
+    /* font-weight: bold; */
+    /* font-style: italic; */
+    font-family: 宋体, sans-serif;
+    /* font: italic 200 50px/2 宋体; */
+    text-indent: 2em;
+    text-align: center;
+    text-decoration: underline;
+    /* line-height: 50px; */
+    line-height: 2;
+    background-color: brown;
+    width: 400;
+    height: 300;
+}
+a {
+    text-decoration: none;
+}
+div {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    text-align: center;
+    line-height: 100px;
+    margin: 0 auto;
+}

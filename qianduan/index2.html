@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index2</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .one {
+            float: left;
+            /* margin-bottom: 50px; */
+        }
+        .two {
+            float: left;
+            /* margin-top: 20px; */
+        }
+        /* 选中第一个 */
+        li:first-child {
+            background-color: pink;
+        }
+        /* 选中最后一个 */
+        li:last-child {
+            background-color: pink;
+        }
+        /* 任意一个 */
+        li:nth-child(5) {
+            background-color: pink;
+        }
+        /* 倒数第几个 */
+        li:nth-last-child(2) {
+            background-color: pink;
+        }
+        .class::before {
+            content: "老鼠";
+            color: red;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+            /* 默认是行内元素，宽高不生效 */
+            display: block;
+        }
+        .class::after {
+            content: "大米";
+        }
+        .clearfix {
+            clear: both;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">你好</div>
+    <div class="two">我是</div>
+</body>
+</html>

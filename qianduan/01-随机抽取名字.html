@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            border: 1px solid pink;
+            vertical-align: middle;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="person">xx</div>
+    <button class="show">点击抽奖</button>
+    <script>
+        let person = document.querySelector('.person')
+        let show = document.querySelector('.show')
+        function getRandom(min, max) {
+             return Math.floor(Math.random() * (max - min + 1)) + min
+        }
+        let arr = ['张三', '李四', '王二', '赵四']
+        show.addEventListener('click', function(){
+            let random = getRandom(0, arr.length-1)
+            person.innerHTML = arr[random]
+            arr.splice(random, 1)
+            if (arr.length === 0){
+                console.log('没有了');
+                show.innerHTML = '抽完了'
+                show.disabled = true
+            }
+        })
+        // console.log(arr);
+    </script>
+</body>
+</html>

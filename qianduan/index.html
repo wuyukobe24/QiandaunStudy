@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是标题</title>
+    <!--  stylesheet 关系：样式表 -->
+    <link rel="stylesheet" href="./my.css">
+    <style>
+        /* h1 {
+            color: red;
+            font-size: 30px;
+        }
+        p {
+            color: green;
+            font-size: 20px;
+            background-color: brown;
+            width: 400;
+            height: 300;
+        } */
+    </style>
+</head>
+<body>
+    这是一个网页 
+    <h1>这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题这是1号标题</h1> 
+    <h2>这是2号标题</h2>
+    <h3>这是2号标题</h3>
+    <h4>这是2号标题</h4>
+    <h4>这是2号标题</h4>
+    <h6>这是2号标题</h6>
+    <div style="color:red; font-size: 10px">这是一个div标签</div>
+    <p>使用brew安装Jenkins <br> 会避免很多其他安装方式产生的用户权限问题，但是会将httpListenAddress默认设置为127.0.0.1，这样我们虽然可以在本地用localhost:8080访问，但是本机和局域网均无法用ip访问。</p>
+    <hr>
+    <p>解决办法为修改两个路径下的plist配置。</p>
+    <b>局域网</b>
+    <u>局域网</u>
+    <i>局域网</i>
+    <s>局域网</s>
+    <br>
+    <strong>局域网</strong>
+    <ins>局域网</ins>
+    <em>局域网</em>
+    <del>局域网</del>
+    <br>
+    <img src="fature.png" alt="替换图片" title="图片名称" height="100" width="200">
+    <audio src="" controls></audio>
+    <video src="" controls muted></video>
+    <br>
+    <a href="https://www.baidu.com/" target="_blank">跳转去百度</a>
+    <br>
+    <a href="./index.html">跳转到自己</a>
+    <br>
+    <ul>
+        <li>无序列表1</li>
+        <li>无序列表2</li>
+    </ul>
+    <br>
+    <ol>
+        <li>有序列表1</li>
+        <li>有序列表1</li>
+    </ol>
+    <br>
+    <dl>
+        <dt>列表标题</dt>
+        <dd>列表内容1</dd>
+        <dd>列表内容2</dd>
+    </dl>
+    <br>
+    <table border="2" width="300" height="100">
+        <caption>成绩单统计</caption>
+        <tr>
+            <th>姓名</th>
+            <th>性别</th>
+            <th>年龄</th>
+        </tr>
+        <tr>
+            <td>王小二</td>
+            <td>男</td>
+            <td>11</td>
+        </tr>
+    </table>
+    <br>
+    <form action="">
+        姓名：<input type="text" placeholder="请输入姓名">
+        <br>
+        密码：<input type="password" placeholder="请输入密码">
+        <br>
+        <!-- name="sex"表示一个组，checked表示默认选中   -->
+        性别：<input type="radio" name="sex">男 <input type="radio" name="sex" checked>女
+        <br>
+        爱好：<input type="checkbox" checked>吃饭 <input type="checkbox" checked>睡觉
+        <br>
+        <!-- multiple表示多选 -->
+        选择文件：<input type="file" multiple>
+        <br>
+        <input type="button" value="普通按钮">
+        <br>
+        <input type="submit">
+        <!-- reset重置功能要在被form表单包围着使用  -->
+        <input type="reset">
+    </form>
+    <br>
+    <button>我是按钮</button>
+    <button type="submit">提交按钮</button>
+    <button type="reset">重置按钮</button>
+    <button type="button">普通按钮</button>
+    <br>
+    城市：
+    <select name="城市">
+        <option value="">北京</option>
+        <option value="">上海</option>
+        <option value="" selected>广州</option>
+    </select>
+    <br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <br>
+    <!-- 第一种方式 -->
+    性别：
+    <input type="radio" name="sex" id="nan"> <label for="nan">男</label>
+    <input type="radio" name="sex" id="nv"> <label for="nv">女</label>
+    <!-- 第二种方式 -->
+    性别：
+    <label> <input type="radio" name="sex"> 男</label> 
+    <label> <input type="radio" name="sex"> 女</label>
+    <br>
+    你&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;好
+    再>见
+    <div class="one two">one two</div>
+</body>
+</html>

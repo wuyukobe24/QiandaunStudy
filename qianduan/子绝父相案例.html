@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* 1、绝对定位的盒子不能使用左右margin auto居中 */
+            position: absolute;
+            /* margin: 0 auto; */
+            /* 设置水平居中 */
+            left: 50%;
+            /* margin-left: -150px; */
+
+            /* 设置上下居中 */
+            /* top: 50%; */
+            /* margin-top: -150px; */
+            /* top: 200px; */
+             margin-top: 100px;
+
+            /* 位移：自己宽度和高度的一半 */
+            transform: translate(-50%);
+
+            width: 400px;
+            height: 300px;
+            background-color: pink;;
+
+            border-radius: 10% 20% 30% 40%;
+            border-radius: 10px 20px 30px 40px;
+            
+            opacity: .2;
+            
+        }
+        input:focus {
+           background-color: red; 
+        }
+
+        div {
+            width: 100px;
+            height: 200px;
+            background-color: skyblue;
+            /* background-image: url(./images/bgc.png);
+            background-position: -3px 0;
+            background-size: contain; */
+            
+            /* box-shadow: 10px 20px 20px 30px green; */
+
+            /* transition: width 1s, background-color 2s; */
+            transition: all 2s;
+        }
+        div:hover {
+            width: 200px;
+            background-color: green;
+        }
+    </style> 
+</head>
+<body>
+    <div class="box">
+        <input type="text">
+        <input type="password">
+    </div> 
+    <div class="sun">sun</div>
+</body>
+</html>

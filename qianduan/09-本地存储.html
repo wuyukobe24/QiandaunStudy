@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>本地存储</title>
+</head>
+<body>
+    <script>
+        // 1、本地存储简单类型
+        localStorage.setItem("uname", "你好")
+        // 取出存储数据
+        let uname = localStorage.getItem("uname")
+        console.log("uname: " + uname);
+        // 2、本地存储复杂数据类型：引用类型（对象）
+        let obj = {
+            "uname" : "还是你好",
+            "age" : 18,
+            "address" : "北京"
+        }
+        localStorage.setItem('obj', JSON.stringify(obj))
+        // 去除对象数据
+        let obj2 = JSON.parse(localStorage.getItem("obj"))
+        console.log("obj2: " + obj2.uname);
+        console.log("obj2: " + obj2.age);
+        console.log("obj2: " + obj2.address);
+    </script>
+</body>
+</html>

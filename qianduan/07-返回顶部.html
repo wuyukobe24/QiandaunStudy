@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返回顶部</title>
+    <style>
+        .content {
+            width: 1000px;
+            height: 3000px;
+            background-color: pink;
+            margin: 0 auto;
+        }
+        .backtop {
+            display: none;
+            width: 100px;
+            left: 50%;
+            background-color: red;
+            border: 1px solid black;
+            margin: 0 0 0 505px;
+            position: fixed;
+            bottom: 60px;
+            z-index: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="content"></div>
+    <div class="backtop">返回顶部</div>
+    <script>
+        let backtop = document.querySelector('.backtop')
+        // 页面滚动事件
+        window.addEventListener('scroll', function(){
+            let num = document.documentElement.scrollTop;
+            console.log(num);
+            console.log('scrollWidth: ' + document.documentElement.scrollWidth);
+            console.log('scrollHeight: '+ document.documentElement.scrollHeight);
+            console.log('offsetTop: '+ backtop.offsetTop);
+            console.log('offsetLeft: '+ backtop.offsetLeft);
+            console.log('clientWidth: '+ backtop.clientWidth);
+            console.log('clientHeight: '+ backtop.clientHeight);
+            if (num >= 500) {
+                backtop.style.display = 'block'
+            } else {
+                backtop.style.display = 'none'
+            }
+        })
+        // 返回顶部
+        backtop.addEventListener('click', function(){
+            document.documentElement.scrollTop = 0
+        })
+        window.addEventListener('click', function(){
+            location.href = 'https:www.baidu.com'
+        })
+    </script>
+</body>
+</html>

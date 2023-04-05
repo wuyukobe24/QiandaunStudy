@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* !important 不要给继承的添加，自己有样式无法继承父级样式 */
+        /* 优先级： */
+        #box {
+            color: pink;
+        }
+        .box {
+            color: blue;
+        }
+        div {
+            color: green !important;
+        }
+        body {
+            color: red;
+            
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box" style="color: orange;">这是一个div标签,测试优先级</div>
+</body>
+</html>

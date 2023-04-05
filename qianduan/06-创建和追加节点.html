@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li class="myli">第一个li</li>
+    </ul>
+    <script>
+        let ul = document.querySelector('ul')
+        let li2 = document.createElement('li')
+        li2.innerHTML = '第二个li，追加到后面'
+        li2.style.color = 'red'
+        let li3 = document.createElement('li')
+        li3.innerHTML = '第三个li，追加到前面'
+        li3.style.color = 'blue'
+        // 追加节点，父元素后面追加
+        ul.appendChild(li2)
+        // 追加节点，父元素前面追加（insertBefore(追加的子元素, 放到哪个元素的前面)）
+        ul.insertBefore(li3, ul.children[0])
+    </script>
+</body>
+</html>
