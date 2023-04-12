@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // get请求
+        function getRequest () {
+            var xhr = new XMLHttpRequest()
+            xhr.open('GET', 'https://i.news.qq.com/trpc.qqnews_web.pc_base_srv.base_http_proxy/NinjaPageContentSync?pull_urls=news_top_2018')
+            xhr.send()
+            xhr.onreadystatechange = function() {
+                if (xhr.status === 200) {
+                    console.log('请求成功');
+                    console.log(xhr.responseText)
+                } else {
+                    console.log('请求失败');
+                }
+            }
+        }
+        // getRequest()
+
+        // post请求
+        function postRequest () {
+            var xhr = new XMLHttpRequest()
+            xhr.open('POST', 'https://otheve.beacon.qq.com/analytics/v2_upload')
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
+            xhr.send('appkey=0WEB0V0Y9T4HC7F8')
+            xhr.onreadystatechange = function() {
+                if (xhr.status === 200) {
+                    console.log('请求成功');
+                    console.log(xhr.responseText)
+                } else {
+                    console.log('请求失败');
+                }
+            }
+        }
+        postRequest()
+    </script>
+</body>
+</html>

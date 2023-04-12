@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax-get</title>
+</head>
+<body>
+    
+    <button class="btnGet">发送get请求</button>
+    <button class="btnGetAjax">使用ajax发送get请求</button>
+    <script src="./jQuery/jquery-3.5.1.js"></script>
+    <script>
+        let url = 'https://i.news.qq.com/trpc.qqnews_web.pc_base_srv.base_http_proxy/NinjaPageContentSync?pull_urls=news_top_2018'
+        // 发送get请求
+        $('.btnGet').click(function(){
+            // {"status":30001,"msg":"出现一个小问题，需要重新登录","data":null,"error_code":30001,"error_msg":"出现一个小问题，需要重新登录"}
+            $.get(url, function(res) {
+                console.log('res: ' + res);
+            })
+        })
+        // 使用ajax发送get请求
+        $('.btnGetAjax').click(function(){
+            $.ajax({
+                type : 'GET',
+                url : url,
+                data : {id : 1},
+                success : function(res) {
+                    console.log('res: '+ res);
+                }
+            })
+        })
+
+    </script>
+</body>
+</html>
