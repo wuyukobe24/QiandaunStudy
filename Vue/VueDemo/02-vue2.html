@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue2 赋值</title>
+    <script src="./vuejs/vue.min.js"></script>
+</head>
+<body>
+    <div id="vue_det">
+        <h1>name: {{name}}</h1>
+        <h1>age: {{age}}</h1>
+        <h1>detail: {{detail()}}</h1>
+    </div>
+    <script type="text/javascript">
+        new Vue({
+            el:'#vue_det',
+            data: {
+                name:"业还需要统",
+                age:"18"
+            },
+            methods: {
+                detail: function(){
+                    return '详情：辛还需要忙还需还需要还需要要看下除需要还需要门老师还需要还需要参还需要加还需要评审'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

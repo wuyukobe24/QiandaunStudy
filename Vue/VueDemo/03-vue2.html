@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue2 外部传入数据</title>
+    <script src="./vuejs/vue.min.js"></script>
+</head>
+<body>
+    <div id="vue_det">
+        <h3>good: {{good}}</h3>
+        <h3>price: {{price}}</h3>
+        <h3>number: {{num}}</h3>
+        <h3>buy: {{buy(20, num)}}</h3>
+    </div>
+    <script type="text/javascript">
+        var data = { good: " iPhone 14", price: "5888", num: 10000}
+        function buy(n, all) {
+            return `我要买${n}个，总共${all}个`
+        }
+        new Vue({
+            el:'#vue_det',
+            data: data,
+            methods: {
+                buy
+            }
+        })
+    </script>
+</body>
+</html>
